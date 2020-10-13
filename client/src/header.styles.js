@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 export const Nav = styled.div`
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 6%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 3px solid magenta;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #541363;
 `;
 
 export const NavLink = styled.a`
@@ -13,6 +18,7 @@ export const NavLink = styled.a`
   margin-right: 15px;
   font-size: 20px;
   border-bottom: 2px solid white;
+  cursor: pointer;
 `;
 
 export const Socials = styled.div`
@@ -40,4 +46,18 @@ export const Twitter = styled.a`
   margin-right: 15px;
   font-size: 20px;
   color: #49a1eb;
+`;
+
+export const Soundcloud = styled.a`
+  height: 30px;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #ff7700;
+`;
+
+export const Spotify = styled.a`
+  height: 30px;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #1DB954;
 `;
