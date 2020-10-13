@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled.div`
   margin-bottom: 6%;
@@ -13,12 +14,14 @@ export const Nav = styled.div`
   background-color: #541363;
 `;
 
-export const NavLink = styled.a`
+export const LinkStyled = styled(Link)`
   height: 30px;
   margin-right: 15px;
   font-size: 20px;
   border-bottom: 2px solid white;
   cursor: pointer;
+  color: white;
+  text-decoration: none;
 `;
 
 export const Socials = styled.div`

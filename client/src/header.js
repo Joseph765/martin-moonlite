@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalStyle } from './global.styles';
-import { Nav, NavLink, Socials, SocialLink, Instagram, Twitter, Youtube, Soundcloud, Spotify } from './header.styles';
+import { Nav, LinkStyled, Socials, SocialLink, Instagram, Twitter, Youtube, Soundcloud, Spotify } from './header.styles';
+import Home from './home';
+import About from './about';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
@@ -21,11 +23,12 @@ export const Header = () => {
     <div>
       <GlobalStyle />
       <Nav>
-        <NavLink>Home</NavLink>
-        <NavLink>Music</NavLink>
-        <NavLink>Photos</NavLink>
-        <NavLink>Biography</NavLink>
-        <NavLink>Discography</NavLink>
+        <LinkStyled to="/" component={Home}>Home</LinkStyled>
+        <LinkStyled to="/about" component={About}>About</LinkStyled>
+        <LinkStyled to="/music" component={About}>Music</LinkStyled>
+        <LinkStyled to="/photos" component={About}>Photos</LinkStyled>
+        <LinkStyled to="/biography" component={About}>Biography</LinkStyled>
+        <LinkStyled to="/discography" component={About}>Discography</LinkStyled>
         <Socials>
           <Soundcloud
             href="https://soundcloud.com/martinmoonlite"
