@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalStyle } from './global.styles';
 import { Nav, LinkStyled, Socials, SocialLink, Instagram, Twitter, Youtube, Soundcloud, Spotify } from './header.styles';
-import Home from './home';
-import About from './about';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
@@ -12,6 +10,13 @@ import {
   faSoundcloud,
   faSpotify
 } from "@fortawesome/free-brands-svg-icons";
+
+import Home from './home';
+import Music from './music';
+import Photos from './photos';
+import Biography from './biography';
+import Discography from './discography';
+
 
 export const Header = () => {
 
@@ -24,11 +29,10 @@ export const Header = () => {
       <GlobalStyle />
       <Nav>
         <LinkStyled to="/" component={Home}>Home</LinkStyled>
-        <LinkStyled to="/about" component={About}>About</LinkStyled>
-        <LinkStyled to="/music" component={About}>Music</LinkStyled>
-        <LinkStyled to="/photos" component={About}>Photos</LinkStyled>
-        <LinkStyled to="/biography" component={About}>Biography</LinkStyled>
-        <LinkStyled to="/discography" component={About}>Discography</LinkStyled>
+        <LinkStyled to="/music" component={Music}>Music</LinkStyled>
+        <LinkStyled to="/photos" component={Photos}>Photos</LinkStyled>
+        <LinkStyled to="/biography" component={Biography}>Biography</LinkStyled>
+        <LinkStyled to="/discography" component={Discography}>Discography</LinkStyled>
         <Socials>
           <Soundcloud
             href="https://soundcloud.com/martinmoonlite"
