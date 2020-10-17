@@ -8,9 +8,10 @@ export const Nav = styled.div`
   border-bottom: 3px solid magenta;
   display: flex;
   justify-content: center;
+  margin: auto;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #541363;
 `;
 

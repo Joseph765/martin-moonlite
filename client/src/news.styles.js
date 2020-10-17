@@ -24,3 +24,9 @@ export const NewsEntry = styled.div `
 export const NewsEntryTitle = styled.h1 `
   text-align: center;
 `;
+
+export const NewsImg = styled.img `
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;

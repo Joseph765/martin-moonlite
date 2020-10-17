@@ -13,12 +13,12 @@ export const Home = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Header />
       <Title>Martin Moonlite</Title>
       <News />
       <Blog />
-    </div>
+    </>
   );
 }

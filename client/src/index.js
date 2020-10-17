@@ -8,6 +8,7 @@ import { Photos } from './photos';
 import { Biography } from './biography';
 import { Discography } from './discography';
 import { NoMatch } from './noMatch';
+import { GlobalStyle } from './global.styles';
 
 ReactDOM.render(
   <Router>
