@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import $ from 'jquery';
 import { Link } from 'react-router-dom';
-import { Nav, LinkStyled, Socials, SocialLink, Instagram, Twitter, Youtube, Soundcloud, Spotify } from './header.styles';
+import { Nav, LinkStyled, Socials, SocialLink, Instagram, Twitter, Youtube, Soundcloud, Spotify, NavLinks } from './header.styles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 import {
   faYoutube,
   faTwitter,
@@ -19,13 +21,36 @@ import Discography from './discography';
 
 export const Header = () => {
 
+  const [display, setDisplay] = useState('none');
+
   useEffect(() => {
 
   }, []);
 
+  function changeDisplay(boolean) {
+    // const nodeList = document.querySelectorAll('.navLink');
+    // const navLinks = Array.prototype.slice.call(nodeList);
+    // navLinks.forEach(item => {
+    //   item.style.display = display;
+    // });
+    // if (display === 'block') {
+    //   setDisplay('none')
+    // } else {
+    //   setDisplay('flex');
+    // }
+    if (display === 'block') {
+      $('.navLink').addClass('block');
+      setDisplay('none');
+    } else {
+      $('.navLink').removeClass('block');
+      setDisplay('block');
+    }
+  }
+
   return (
+    <>
     <Nav>
-      <LinkStyled to="/" component={Home}>Home</LinkStyled>
+      {/* <LinkStyled to="/" component={Home}>Home</LinkStyled>
       <LinkStyled to="/music" component={Music}>Music</LinkStyled>
       <LinkStyled to="/photos" component={Photos}>Photos</LinkStyled>
       <LinkStyled to="/biography" component={Biography}>Biography</LinkStyled>
@@ -61,7 +86,17 @@ export const Header = () => {
           target="_blank">
           <FontAwesomeIcon icon={faTwitter} size="2x" />
         </Twitter>
-      </Socials>
+      </Socials> */}
+      <h1>Moonlite</h1>
+      <FontAwesomeIcon className="hamburger" icon={faAlignJustify} onClick={ () => changeDisplay()} />
     </Nav>
+    <NavLinks>
+      <Link className="navLink" id="home-link" to="/" component={Home}>Home</Link>
+      <Link className="navLink" id="music-link" to="/music" component={Music}>Music</Link>
+      <Link className="navLink" id="photos-link" to="/photos" component={Photos}>Photos</Link>
+      <Link className="navLink" id="biography-link" to="/biography" component={Biography}>Biography</Link>
+      <Link className="navLink" id="discography-link" to="/discography" component={Discography}>Discography</Link>
+    </NavLinks>
+    </>
   );
 }

@@ -13,6 +13,35 @@ export const Nav = styled.div`
   top: 0;
   width: 100%;
   background-color: #541363;
+
+  .hamburger {
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: 3%;
+    cursor: pointer;
+  }
+`;
+
+export const NavLinks = styled.div `
+
+  margin-top: 10%;
+
+  .block {
+    display: flex!important;
+    flex-direction: column;
+  }
+
+  .navLink {
+    display: none;
+    height: 30px;
+    margin-right: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    flex-direction: column;
+  }
 `;
 
 export const LinkStyled = styled(Link)`
