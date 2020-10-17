@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Purple, Magenta, Maroon, Indigo, Title } from './home.styles';
+import { Purple, Magenta, Maroon, Indigo, Title, HomeWrapper } from './home.styles';
 import { GlobalStyle } from './global.styles';
 import { Header } from './header';
 import { News } from './news';
@@ -16,9 +16,11 @@ export const Home = () => {
     <>
       <GlobalStyle />
       <Header />
-      <Title>Martin Moonlite</Title>
-      <News />
-      <Blog />
+      <HomeWrapper>
+        <Title>Martin Moonlite</Title>
+        <News />
+        <Blog />
+      </HomeWrapper>
     </>
   );
 }
