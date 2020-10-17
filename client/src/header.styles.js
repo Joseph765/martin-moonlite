@@ -36,6 +36,7 @@ export const HeaderDiv = styled.div `
   top: 0;
   width: 100%;
   background-color: #541363;
+  min-height: 50px;
   ${media.desktop} {
     padding-bottom: 1%;
     border-bottom: 3px solid magenta;
