@@ -3,7 +3,7 @@ import { GlobalStyle } from './global.styles';
 import { Header } from './header';
 import { PhotosTitle } from './photos.styles';
 
-const Photos = () => {
+export const Photos = () => {
 
   useEffect(() => {
 
@@ -17,5 +17,3 @@ const Photos = () => {
     </>
   );
 }
-
-export default Photos;
