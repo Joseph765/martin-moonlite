@@ -50,6 +50,7 @@ export const ImageCarousel = styled.div `
 export const AllPhotos = styled.div `
   width: 100%;
   margin: auto;
+  text-align: center;
 
   ${media.desktop} {
     width: 80%;
