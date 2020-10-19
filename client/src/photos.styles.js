@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const media = {
+  desktop: '@media(min-width: 1000px)'
+}
+
 export const PhotosTitle = styled.h1 `
   font-size: 45px;
   text-align: center;
@@ -9,14 +13,21 @@ export const PhotosTitle = styled.h1 `
 `;
 
 export const ImageCarousel = styled.div `
-  width: 80%;
+  width: 100%;
   margin: auto;
   position: relative;
   margin-bottom: 10%;
+
+  ${media.desktop} {
+    width: 80%;
+  }
+
   .arrow-left, .arrow-right {
-    font-size: 30px;
+    font-size: 60px;
+    font-weight: 900;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     user-select: none;
   }
@@ -25,16 +36,25 @@ export const ImageCarousel = styled.div `
   }
 
   img {
-    height: 500px;
+    width: 100%;
     user-select: none;
     display: block;
     margin: auto;
+    ${media.desktop} {
+      height: 500px;
+      width: auto;
+    }
   }
 `;
 
 export const AllPhotos = styled.div `
-  width: 80%;
+  width: 100%;
   margin: auto;
+
+  ${media.desktop} {
+    width: 80%;
+  }
+
   img {
     height: 300px;
   }
